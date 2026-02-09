@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background: #F44336; color: white; padding: 20px; text-align: center; }
+        .content { padding: 20px; background: #f9f9f9; text-align: center; }
+        .button { display: inline-block; padding: 15px 30px; background: #F44336; color: white; text-decoration: none; border-radius: 5px; margin: 20px 0; font-size: 18px; font-weight: bold; }
+        .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>🚨 Interview Starting in 30 Minutes!</h2>
+        </div>
+        <div class="content">
+            <p><strong>Hi {{ candidate_name }},</strong></p>
+            
+            <h3>Your interview for {{ job_title }} starts in 30 minutes!</h3>
+            
+            <p><strong>Time:</strong> {{ interview_date }}</p>
+            
+            {% if meeting_link %}
+            <a href="{{ meeting_link }}" class="button">JOIN NOW</a>
+            {% endif %}
+            
+            {% if meeting_location %}
+            <p><strong>Location:</strong> {{ meeting_location }}</p>
+            {% endif %}
+            
+            <p style="margin-top: 30px;">Take a deep breath and good luck! 🍀</p>
+        </div>
+        <div class="footer">
+            <p>ZecPath - Your Career Partner</p>
+        </div>
+    </div>
+</body>
+</html>
